@@ -1,0 +1,183 @@
+/* CSS Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    animation: fadeInDown 0.8s ease-out;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 2em 0;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content p {
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.footer-content p:first-child {
+    font-size: 1.2em;
+}
+
+.footer-content p:last-child {
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+
+
+@keyframes fadeInDown {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+nav {
+    background-color: #388E3C; /* Warna hijau yang lebih Indonesia */
+    text-align: center;
+    padding: 0.5em 0;
+    animation: slideInDown 0.8s ease-out;
+}
+
+@keyframes slideInDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #2E7D32; /* Warna hijau yang lebih gelap */
+    border-radius: 5px;
+}
+
+section {
+    padding: 2em;
+    background-color: #FFFFFF; /* Warna putih */
+    margin: 1em auto;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: zoomIn 0.8s ease-out;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+section h2 {
+    color: #4CAF50; /* Warna hijau */
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 0.5em;
+}
+
+section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+section ul li {
+    margin: 1em 0;
+}
+
+.responsive {
+    width: 100%;
+    height: auto;
+    margin: 1em 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-out;
+}
+
+.animate-image {
+    animation: moveImage 2s ease-in-out infinite alternate;
+}
+
+@keyframes moveImage {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(20px); /* Adjust the distance as needed */
+    }
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        display: block;
+        text-align: center;
+        margin: 0.5em 0;
+        animation: slideInLeft 0.8s ease-out;
+    }
+
+    @keyframes slideInLeft {
+        0% {
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    nav ul li {
+        display: block;
+        margin: 0.5em 0;
+    }
+}
